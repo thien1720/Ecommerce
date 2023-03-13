@@ -25,21 +25,23 @@ const User = new Schema({
         type: String,
         default: "https://static.productionready.io/images/smiley-cyrus.jpg"
     },
-        accessToken :{
+    accessToken: {
         type: String,
-        unique: true
+        unique: true,
+        default : "",
     },
-    refreshToken :{
+    refreshToken: {
         type: String,
-        unique: true
+        unique: true,
+        default : "",
     }
 }, {
     timestamps: true,
 })
 
-User.plugin(mongooseDelete ,{ 
+User.plugin(mongooseDelete, {
     overrideMethods: true,
-    deletedAt : true
+    deletedAt: true
 })
 
 module.exports = mongoose.model('User', User)
