@@ -6,9 +6,9 @@ const getAllProduct = async (req, res) => {
         const getAllProduct = await Product.find({})
         return res.status(200).json({
             message: "Get All products is success.",
-            data: {
+            data: [
                 getAllProduct
-            }
+            ]
         })
     } catch (error) {
         return res.status(402).json({ error: error.message })
@@ -24,9 +24,9 @@ const getDetailProduct = async (req, res) => {
 
         return res.status(200).json({
             message: "Get One Products is success.",
-            data: {
+            data: [
                 findOneProduct
-            }
+            ]
         })
     } catch (error) {
         return res.status(402).json({ error: error.message })
@@ -42,9 +42,9 @@ async function getProductPage(req, res, next) {
         const getProductToPage = await Product.paginate({}, { page: page, limit:2})
         return res.status(200).json({
             message: `Get Products page ${page} success.`,
-            data: {
+            data: [
                 getProductToPage
-            }
+            ]
         })
     } catch (error) {
         return res.status(402).json({ error: error.message })
@@ -60,9 +60,9 @@ async function seacherfindNameProduct(req, res, next) {
 
         return res.status(200).json({
             message: "Get All products by name.",
-            data: {
+            data: [
                 getSearchAll
-            }
+            ]
         })
 
     } catch (error) {
@@ -81,9 +81,9 @@ async function seacherByPrice(req, res, next) {
 
             return res.status(200).json({
                 message: "Get All products by price .",
-                data: {
+                data: [
                     getByPrice
-                }
+                ]
             })
         }
 

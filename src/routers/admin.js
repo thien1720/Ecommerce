@@ -24,7 +24,6 @@ router.delete("/destroy-user",authMiddleware, DeleteDestroyUsersDetailes)
 router.delete('/delete-user', authMiddleware, DeleteUsersDetailes)
 router.patch('/restore-user', authMiddleware, RestoreUsersDetailes)
 
-
 // product
 router.post('/create-product',authMiddleware ,createProductDetail)
 router.put('/update-product',authMiddleware ,updateProductDetailes)
