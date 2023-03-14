@@ -4,6 +4,7 @@ const Admin = require('./admin')
 const Carts = require('./carts')
 const Comments = require('./comment')
 const Builds = require('./buildPay')
+const {getAllProduct} = require("../controllers/ProductController")
 
 function route(app){
     app.use('/admin', Admin)
@@ -12,6 +13,7 @@ function route(app){
     app.use('/cart', Carts)
     app.use("/comment" , Comments)
     app.use("/build" , Builds)
+    app.get("/" , getAllProduct)
 }
 
 module.exports = route

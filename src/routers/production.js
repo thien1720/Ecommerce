@@ -9,11 +9,11 @@ const {
     seacherByPrice
 } = require('../controllers/ProductController');
 
+router.post('/search-product-by-price', seacherByPrice)
+router.post('/search-product-name', seacherfindNameProduct)
 router.get('/page', getProductPage)
 router.get('/:id', getDetailProduct)
-router.get('/', getAllProduct)
-router.post('/search-product-name', seacherfindNameProduct)
-router.post('/search-product-by-price', seacherByPrice)
+// router.get('/', getAllProduct)
 
 
 module.exports = router
