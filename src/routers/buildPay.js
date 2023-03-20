@@ -8,7 +8,7 @@ const {
     destroyBuild
 } = require("../controllers/BuildController")
 
-router.post("/",authCheckUserMiddleware ,addBuild)
+router.post("/" ,addBuild)
 router.get("/get-build-user",authCheckUserMiddleware, getBuildUser)
 router.put("/destroy-build", destroyBuild)
 
