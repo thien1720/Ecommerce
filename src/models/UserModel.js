@@ -6,12 +6,10 @@ const User = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true
     },
     userName: {
         type: String,
         required: true,
-        unique: true
     },
     passWord: {
         type: String,

@@ -8,7 +8,7 @@ async function authCheckUserMiddleware(req, res, next) {
             return res.status(404).json({ message: err.message })
         }
         console.log(user)
-        req.body.id = user.id
+        req.body.idUser = user.id
         next()
     });
 }
